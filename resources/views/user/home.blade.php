@@ -47,7 +47,7 @@
                 <div class = "card-header">みんなの最新登録リンク</div>
             </div>
             <div class = "card-body">
-            @for($i = 0; $i < 10; $i++)
+            <!--@for($i = 0; $i < 10; $i++)
                 <div class = "target-container">
                     <div class = "title-wrapper">
                         <div class = "t-titleArea">
@@ -71,7 +71,7 @@
                         </div>
                     </div>
                 </div>
-            @endfor
+            @endfor -->
             </div>
         </div>
     </div>
