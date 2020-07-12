@@ -16,7 +16,7 @@ class PostsTableSeeder extends Seeder
         for($i = 1; $i <= 10; $i++){
             $post = new Post;
             $post->target = 'skillexample'.$i.'.com';
-            $post->user_id = 2;
+            $post->user_id = 1;
             $post->title = '便利なurl'.$i;
             $post->content = 'phpのコードが確認できます';
             $post->save();
