@@ -47,31 +47,7 @@
                 <div class = "card-header">みんなの最新登録リンク</div>
             </div>
             <div class = "card-body">
-            <!--@for($i = 0; $i < 10; $i++)
-                <div class = "target-container">
-                    <div class = "title-wrapper">
-                        <div class = "t-titleArea">
-                             <a href="show/{{$users[$i]->id}}">
-                                 @if($users[$i] -> image == null)
-                                      <img src="/storage/img/default_user_image.png" class = "timeLine-image">
-                                 @else
-                                      <img src="{{ asset('/storage/img/'.$users[$i] -> image) }}" class = "timeLine-image">
-                                 @endif
-                             </a>
-                            <span class = "timeLine-title">{{$others[$i]->title}}</span>
-                        </div>
-                        <div class = "btn-area"><span class = "detail_btn" unselectable="on">詳細表示</span></div>
-                    </div>
-                    <div class = "slide-area hide">
-                        <div class = "timeLine-url-area">
-                            <a href="{{$others[$i]->target}}" class = "timeLine-url">{{$others[$i]->target}}</a>
-                        </div>
-                        <div class = "copy-btn-area">
-                            <span class = "copy_btn" unselectable = "on">urlをコピー<span>
-                        </div>
-                    </div>
-                </div>
-            @endfor -->
+            <!-- php -->
             </div>
         </div>
     </div>
