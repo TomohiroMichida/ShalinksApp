@@ -58,7 +58,7 @@
                                         <img alt = "プロフィール画像" src = "/storage/img/default_user_image.png" class = "p-image">
                                         {{ Auth::user()->name }} <span class="caret"></span>
                                     @else
-                                    <img alt="プロフィール画像" src="{{ asset('/storage/img/'.Auth::user()->image) }}" class = "p-image">
+                                    <img alt="プロフィール画像" src="{{ asset('storage/img/'.Auth::user()->image) }}" class = "p-image">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                     @endif
                                 </a>
