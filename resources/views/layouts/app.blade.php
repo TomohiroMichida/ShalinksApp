@@ -55,10 +55,10 @@
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     @if(Auth::user() -> image == null)
-                                        <img alt = "プロフィール画像" src = "/storage/img/default_user_image.png" class = "p-image">
+                                        <img alt = "プロフィール画像" src = "{{ asset('images/default_user_image.png') }}" class = "p-image">
                                         {{ Auth::user()->name }} <span class="caret"></span>
                                     @else
-                                    <img alt="プロフィール画像" src="{{ asset('storage/img/'.Auth::user()->image) }}" class = "p-image">
+                                    <img alt="プロフィール画像" src="{{ Storage::disk('s3')->url(Auth::user()->image) }}" class = "p-image">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                     @endif
                                 </a>

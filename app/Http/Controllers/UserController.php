@@ -56,8 +56,12 @@ class UserController extends Controller
         $user -> introduction = $request -> introduction;
 
         if($request->file('image')){
-            $path = $request -> file('image') -> store('public/img');
-            $user -> image = basename($path);
+            $file = $params['image'];
+            //s3のファイルに保存
+            $path = Storage::disk('s3')->put('/images',$file,'public');
+            /*$path = $request -> file('image') -> store('public/img');
+            $user -> image = basename($path);*/
+            $user->image = $path;
         }
 
         $user -> save();
