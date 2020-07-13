@@ -16,7 +16,7 @@
                             @endif
                         </p>
                         @if($user -> image == null)
-                            <img src="{{asset('images/shalinks.png')}}" class = "p-edit-image" alt="プロフィール画像">
+                            <img src="{{asset('images/default_user_image.png')}}" class = "p-edit-image" alt="プロフィール画像">
                         @else
                             <img src="{{ Storage::disk('s3')->url($user -> image) }}" class = "p-edit-image" alt = "プロフィール画像">
                         @endif
