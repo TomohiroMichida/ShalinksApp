@@ -19,10 +19,10 @@
                          <div class = "title-wrapper">
                             <div class = "titleArea">
                                  <span class = "content-title">
-                                    {{$post->title}}
-                                    @if($user->id == Auth::id())
+                                     @if($user->id == Auth::id())
                                         <a href="post_edit/{{$post->id}}" class = "edit-btn"><i class=" fas fa-edit"></i></a>
-                                    @endif
+                                     @endif
+                                    {{$post->title}}
                                 </span>
                             </div>
                             <div class = "btn-area"><span class = "detail_btn" unselectable="on">詳細表示</span></div>
@@ -53,9 +53,9 @@
                              <div class = "t-titleArea">
                                   <a href="show/{{$users[$i]->id}}">
                                       @if($users[$i] -> image == null)
-                                           <img src="/storage/img/default_user_image.png" class = "timeLine-image">
+                                           <img src="{{ asset('images/default_user_image.png') }}" class = "timeLine-image">
                                       @else
-                                           <img src="{{ asset('/storage/img/'.$users[$i] -> image) }}" class = "timeLine-image">
+                                           <img src="{{ Storage::disk('s3')->url($users[$i]->image) }}" class = "timeLine-image">
                                       @endif
                                   </a>
                                  <span class = "timeLine-title">{{$others[$i]->title}}</span>
@@ -72,6 +72,7 @@
                          </div>
                      </div>
                  @endfor 
+                 {{$others->links()}}
             </div>
         </div>
     </div>

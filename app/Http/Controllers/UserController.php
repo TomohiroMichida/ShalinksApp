@@ -15,7 +15,7 @@ class UserController extends Controller
     {   
         $user = Auth::user();
         $posts = Post::where('user_id',$user->id)->orderBy('id','desc')->paginate(10);
-        $others = Post::orderBy('id','DESC')->take(10)->get();
+        $others = Post::orderBy('id','DESC')->paginate(10);  //元はtake(10)->get()
         
         foreach($others as $other){
             $users[] = User::find($other -> user_id); 
