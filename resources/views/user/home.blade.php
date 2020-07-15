@@ -47,7 +47,8 @@
                 <div class = "card-header">みんなの最新登録リンク</div>
             </div>
             <div class = "card-body">
-                 @for($i = 0; $i < 10; $i++)
+                {{$cnt = count($others)}}
+                 @for($i = 0; $i < $cnt; $i++)
                      <div class = "target-container">
                          <div class = "title-wrapper">
                              <div class = "t-titleArea">
