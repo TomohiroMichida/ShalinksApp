@@ -17,9 +17,9 @@ class UserController extends Controller
         $user = Auth::user();
         //ページネーション非同期
         $posts = Post::where('user_id',$user->id)->orderBy('id','desc')->paginate(10,["*"],'userpage')
-        ->appends(["otherpage" => Request::get('otherpage')]);
+        ->appends(["otherpage" => \Request::get('otherpage')]);
         $others = Post::orderBy('id','DESC')->paginate(10,["*"],'otherpage')
-        ->appends(["userpage" => Request::get('userpage')]);
+        ->appends(["userpage" => \Request::get('userpage')]);
         
         foreach($others as $other){
             $users[] = User::find($other -> user_id); 
