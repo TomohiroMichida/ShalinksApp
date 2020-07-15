@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Pagination\Environment;
-use App;
 use App\User;
 use App\Post;
 use Auth;
@@ -16,11 +15,11 @@ class UserController extends Controller
     public function index()
     {   
         $user = Auth::user();
-        $posts = Post::where('user_id',$user->id)->orderBy('id','desc')->paginate(10);
         //ページネーション非同期
-        $paginatorEnv = App::getFacadeApplication()['paginator'];
-        $paginatorEnv->setPageName('otherPage');
-        $others = Post::orderBy('id','DESC')->paginate(10);  //元はtake(10)->get()
+        $posts = Post::where('user_id',$user->id)->orderBy('id','desc')->paginate(10,["*"],'userpage')
+        ->appends(["otherpage" => Input::get('otherpage')]);
+        $others = Post::orderBy('id','DESC')->paginate(10,["*"],'otherpage')
+        ->appends(["userpage" => Input::get('userpage')]);
         
         foreach($others as $other){
             $users[] = User::find($other -> user_id); 
