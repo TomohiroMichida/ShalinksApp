@@ -45,7 +45,7 @@ class UserController extends Controller
     }
 
     public function edit(Request $request, $id){
-        if($id == 5){
+        if($id == 31){
             return redirect('/') -> with('my_status',__('プロフィール機能を使うには新規登録が必要です'));
         }
         $user = User::find($id);

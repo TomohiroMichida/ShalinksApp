@@ -47,7 +47,7 @@ class LoginController extends Controller
     }
 
     protected function authenticated(Request $request, $user)
-    {   if($user->id == 5){
+    {   if($user->id == 31){
         return redirect('/')->with('my_status',__('ゲストログインしました'));
     }
         return redirect('/')->with('my_status',__('ログインしました'));
