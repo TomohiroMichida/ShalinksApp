@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
-    <link href="{secure_asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{secure_asset('css/app.css') }}" rel="stylesheet">
     <link href="{{secure_asset('css/styles.css')}}" rel="stylesheet" >
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <style>@import url('https://fonts.googleapis.com/css?family=Kosugi');</style>
