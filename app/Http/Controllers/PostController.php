@@ -14,7 +14,7 @@ class PostController extends Controller
        }
 
     public function create(Request $request, $id){
-        if($id == 5){
+        if($id == 31){
             return redirect('/') -> with('my_status',__('url登録機能を使うには新規登録が必要です'));
         }
         $user = User::find($id);
