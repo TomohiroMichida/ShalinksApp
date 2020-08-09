@@ -6,6 +6,7 @@
 config/
 js/
 composer.lock
+package.json
 composer.json
 package-lock.json
 .env
