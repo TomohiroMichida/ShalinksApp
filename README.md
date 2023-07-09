@@ -1,22 +1,23 @@
 # Shalinks
 
-Shalinks は url のブックマーク機能と SNS を組み合わせたサービスです。
+Shalinks is a service that combines URL bookmarking functionality with social networking features.
 
-## 概要
+## Overview
 
-Shalinks を使うと、プログラミングの勉強などで役立つサイトの url を保存し、いつでも確認することができます。あなたが登録したリンクはほかのユーザーも自由に見ることができ、あなたもほかのユーザーの登録リンクを閲覧できます。有益なサイトはどんどん皆で共有していきましょう。
+With Shalinks, you can save and access URLs of useful websites, particularly for programming study purposes. The links you register can be viewed by other users, and you can also browse links registered by other users. Let's share valuable websites with each other.
 
-## 機能
+## Features
 
-このアプリに実装されているのは以下の機能となります。  
-・ログイン機能  
-・ゲストログイン機能  
-・プロフィール編集機能  
-・投稿機能（url 登録機能）  
-・投稿削除機能  
-・投稿編集機能
+The following features are implemented in this application:
 
-## 開発環境
+- Login functionality
+- Guest login functionality
+- Profile editing functionality
+- Posting functionality (URL registration)
+- Post deletion functionality
+- Post editing functionality
+
+## Development Environment
 
 ・PHP  
 ・laravel  
